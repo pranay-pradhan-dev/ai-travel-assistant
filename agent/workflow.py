@@ -68,13 +68,14 @@ def build_sources(documents):
 
         source_key = (title, url)
 
-        if source_key not in seen:
-            seen.add(source_key)
-            sources.append(
-                f"- {url}"
-                if url
-                else f"- {title}"
-            )
+    if url:
+        sources.append(
+            f"- {url}"
+        )
+    else:
+        sources.append(
+            f"- {title}"
+        )
 
     return "\n".join(sources)
 
