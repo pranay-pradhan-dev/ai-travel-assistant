@@ -241,3 +241,5 @@ Thumbs.db
 
 # Vector database
 chrom*_db/
+
+.env
