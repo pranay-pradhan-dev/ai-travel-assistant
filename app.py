@@ -74,7 +74,10 @@ if user_message:
     with st.chat_message("assistant"):
 
         with st.spinner("Planning your trip..."):
-            response = process_message(user_message)
+            response = process_message(
+                user_message=user_message,
+                conversation_history=st.session_state.messages,
+                )
 
         st.markdown(response)
 
